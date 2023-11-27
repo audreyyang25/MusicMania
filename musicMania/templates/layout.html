@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="/static/styles.css" rel="stylesheet">
+        <title>{% block title %}Music Mania{% endblock %} </title>
+    </head>
+
+    <body>
+        <div class="topnav">
+            <a class="nav-link" href="home">Home</a>
+            <a class="nav-link" href="quiz">Quizzes</a>
+            <a class="nav-link" href="games">Games</a>
+            <a class="nav-link" href="composers">Composers</a>
+          </div>
+        <div class="header">
+            <h1>{% block header %}Music Mania{% endblock %}</h1>
+        </div>
+
+        {% block main %}
+        <div class="card">
+            <p>text...</p>
+        </div>
+        {% endblock %}
+    </body>
+</html>
