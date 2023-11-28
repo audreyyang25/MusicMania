@@ -5,6 +5,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
         <link href="/static/styles.css" rel="stylesheet">
         <title>{% block title %}Music Mania{% endblock %} </title>
+        {% block script %}{% endblock %}
     </head>
 
     <body>
@@ -20,7 +21,28 @@
 
         {% block main %}
         <div class="card">
-            <p>text...</p>
+            <h1>A Brief History of Classical Music</h1>
+            <p>Classical music is generally divided into four musical periods: Baroque, Classical, Romantic, and Contemporary. The following sections will give a brief overview of each era.</p>
+        </div>
+        <div class="card">
+            <h2>Romantic Period (1800-1910)</h2>
+            <p>The Romantic period is generally characterized by the intensity of energy and passion in musical compositions. Composers during this time focused more on nature, national identity, and the supernatural.
+                Nocturnes, etudes, and rhapsodies became more popular, in addition to traditional structures like sonatas.
+                In addition, composers experimented with new musical conventions and formats, using a wider range of dynamics and pitch, as well as more liberty during performances.
+            </p>
+            <p>Some famous Romantic composers include Chopin, Liszt, and Mendelssohn. Click each composer's name to learn more!</p>
+            <p>Click <a href="https://en.wikipedia.org/wiki/Romantic_music">here</a> to learn more about the Romantic period!</p>
+        </div>
+        <div class="card">
+            <h2>Contemporary Period (1890 - present)</h2>
+            <p>
+                The Contemporary Period can be subdivided into the Modernist period (1890 - 1975) and the Contemporary period (1950 - present).
+                The Modernist period includes the Impressionist, Expressionist, and Neoclassical movements, which represent a transition from Romantic to Contemporary styles.
+                Impressionism was an especially notable musical movement that focused on using more unique "colors" and tonal combinations; it is often associated with composers Debussy and Ravel.
+                The Contemporary period is notable for its rejection of traditionally accepted composition techniques and styles, and its exploratory harmonies.
+            </p>
+            <p>Some notable Contemporary composers include Debussy, Prokofiev, and Gershwin. Click each composer's name to learn more!</p>
+            <p>Click <a href="https://en.wikipedia.org/wiki/Contemporary_classical_music">here</a> to learn more about the Contemporary period!</p>
         </div>
         {% endblock %}
     </body>
