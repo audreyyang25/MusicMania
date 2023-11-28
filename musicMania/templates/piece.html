@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Piece Quiz
+{% endblock %}
+
+{% block header %}
+    Which piece should you listen to?
+{% endblock %}
+
+{% block script %}
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+        let romCount, thoughtCount, energyCount, playCount = 0;
+        let rom = document.querySelectorAll ('.romantic');
+        let thought = document.querySelectorAll ('.thoughtful');
+        let energy = document.querySelectorAll ('.energetic');
+        let play = document.querySelectorAll ('.playful');
+
+        for (let i = 0; i < rom.length; i++){
+            rom [i].addEventListener('click', function(){
+                romCount++;
+                rom[i].style.backgroundColor = 'Gray';
+            });
+        }
+
+        for (let i = 0; i < thought.length; i++){
+            thought[i].addEventListener('click', function(){
+                thoughtCount++;
+                thought[i].style.backgroundColor = 'Gray';
+            });
+        }
+
+        for (let i = 0; i < energy.length; i++){
+            energy [i].addEventListener('click', function(){
+                energyCount++;
+                energy[i].style.backgroundColor = 'Gray';
+            });
+        }
+
+        for (let i = 0; i < play.length; i++){
+            play [i].addEventListener('click', function(){
+                playCount++;
+                play[i].style.backgroundColor = 'Gray';
+            });
+        }
+
+        document.querySelector("check").addEventListener('click', function(){
+            max = Math.max(romCount, thoughtCount, energyCount, playCount);
+            if (max == romCount){
+                document.querySelector('.feedback').innerHTML = 'Romantic';
+            }
+        });
+
+
+    });
+</script>
+{% endblock %}
+
+{% block main %}
+    <div class="card">
+        <p>Favorite breakfast food?
+        </p>
+        <button class="romantic" type="submit">Waffles</button>
+        <button class="thoughtful" type="submit">Fruit</button>
+        <button class="energetic" type="submit">Breakfast Sandwich</button>
+        <button class="playful" type="submit">Omelet</button>
+
+        <button class="check">Submit</button>
+        <p class="feedback"></p>
+
+    </div>
+{% endblock %}
