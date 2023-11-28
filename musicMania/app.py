@@ -30,3 +30,7 @@ def index():
 @app.route("/quiz")
 def quiz():
     return render_template("mcquiz.html")
+
+@app.route("/piece")
+def pieceQuiz():
+    return render_template("piece.html")
