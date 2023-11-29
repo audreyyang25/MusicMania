@@ -10,17 +10,28 @@
 
 {% block script %}
 <script>
+
     document.addEventListener('DOMContentLoaded', function(){
-        let romCount, thoughtCount, energyCount, playCount = 0;
+        let max = '';
+        let romCount = 0;
+        let thoughtCount = 0;
+        let energyCount = 0;
+        let playCount = 0;
         let rom = document.querySelectorAll ('.romantic');
         let thought = document.querySelectorAll ('.thoughtful');
         let energy = document.querySelectorAll ('.energetic');
         let play = document.querySelectorAll ('.playful');
+        let submit = document.querySelector ('.submit');
+
 
         for (let i = 0; i < rom.length; i++){
             rom [i].addEventListener('click', function(){
                 romCount++;
+
                 rom[i].style.backgroundColor = 'Gray';
+                if (romCount == Math.max(romCount, thoughtCount, energyCount, playCount)){
+                    max = 'Romantic';
+                }
             });
         }
 
@@ -28,13 +39,19 @@
             thought[i].addEventListener('click', function(){
                 thoughtCount++;
                 thought[i].style.backgroundColor = 'Gray';
+                if (thoughtCount == Math.max(romCount, thoughtCount, energyCount, playCount)){
+                    max = 'Thoughtful';
+                }
             });
         }
 
         for (let i = 0; i < energy.length; i++){
-            energy [i].addEventListener('click', function(){
+            energy[i].addEventListener('click', function(){
                 energyCount++;
                 energy[i].style.backgroundColor = 'Gray';
+                if (energyCount == Math.max(romCount, thoughtCount, energyCount, playCount)){
+                    max = 'Energetic';
+                }
             });
         }
 
@@ -42,18 +59,18 @@
             play [i].addEventListener('click', function(){
                 playCount++;
                 play[i].style.backgroundColor = 'Gray';
+                if (playCount == Math.max(romCount, thoughtCount, energyCount, playCount)){
+                    max = 'Playful';
+                }
             });
         }
 
-        document.querySelector("check").addEventListener('click', function(){
-            max = Math.max(romCount, thoughtCount, energyCount, playCount);
-            if (max == romCount){
-                document.querySelector('.feedback').innerHTML = 'Romantic';
-            }
+        submit.addEventListener('click', function(){
+            submit.parentElement.querySelector('.feedback').innerHTML = max;
         });
 
-
     });
+
 </script>
 {% endblock %}
 
@@ -65,8 +82,8 @@
         <button class="thoughtful" type="submit">Fruit</button>
         <button class="energetic" type="submit">Breakfast Sandwich</button>
         <button class="playful" type="submit">Omelet</button>
-
-        <button class="check">Submit</button>
+        <p></p>
+        <button class="submit">Submit</button>
         <p class="feedback"></p>
 
     </div>
