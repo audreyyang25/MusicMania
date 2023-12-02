@@ -27,6 +27,11 @@ def after_request(response):
 def index():
     return render_template("layout.html")
 
+# optimize later!!
+@app.route("/home")
+def home():
+    return render_template("layout.html")
+
 @app.route("/quiz")
 def quiz():
     return render_template("mcquiz.html")
@@ -34,3 +39,15 @@ def quiz():
 @app.route("/piece")
 def pieceQuiz():
     return render_template("piece.html")
+
+@app.route("/composers")
+def composers():
+    return render_template("composers.html")
+
+@app.route("/games")
+def games():
+    return render_template("games.html")
+
+@app.route("/composers/Chopin")
+def chopin():
+    return render_template("chopin.html")
