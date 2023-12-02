@@ -92,6 +92,6 @@ def mozart():
 def beethoven():
    return render_template("beethoven.html")
 
-@app.route("/Schubert")
-def schubert():
-   return render_template("schubert.html")
+@app.route("/Haydn")
+def haydn():
+   return render_template("haydn.html")
