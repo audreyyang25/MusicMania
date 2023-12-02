@@ -48,6 +48,50 @@ def composers():
 def games():
     return render_template("games.html")
 
-@app.route("/composers/Chopin")
+@app.route("/Chopin")
 def chopin():
     return render_template("chopin.html")
+
+@app.route("/Liszt")
+def liszt():
+    return render_template("liszt.html")
+
+@app.route("/Mendelssohn")
+def mendelssohn():
+    return render_template("mendelssohn.html")
+
+@app.route("/Debussy")
+def debussy():
+    return render_template("debussy.html")
+
+@app.route("/Prokofiev")
+def prokofiev():
+    return render_template("prokofiev.html")
+
+@app.route("/Gershwin")
+def gershwin():
+    return render_template("gershwin.html")
+
+@app.route("/Bach")
+def bach():
+   return render_template("bach.html")
+
+@app.route("/Handel")
+def handel():
+   return render_template("handel.html")
+
+@app.route("/Vivaldi")
+def vivaldi():
+   return render_template("vivaldi.html")
+
+@app.route("/Mozart")
+def mozart():
+   return render_template("mozart.html")
+
+@app.route("/Beethoven")
+def beethoven():
+   return render_template("beethoven.html")
+
+@app.route("/Schubert")
+def schubert():
+   return render_template("schubert.html")
