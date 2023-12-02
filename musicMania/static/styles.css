@@ -19,25 +19,30 @@ body {
     width: 90%;
 }
 
+
 .header {
     background-color: #333;
     color: #fff;
     margin-top: 50px;
-    margin-bottom: 50px;
-    margin-right: 500px;
-    margin-left: 500px;
-    padding: 10px 25px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 30%
+    margin: auto;
     text-align: center;
     font-family: "Georgia";
     font-size: 20pt;
-}
+ }
 
-.card {
+ .card1 {
     background-color: white;
     padding: 20px;
-    margin-top: 20px;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-top: 50px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    text-align:center;
+    font-size: 1.5em;
  }
 
 /* Add a black background color to the top navigation */
@@ -80,4 +85,9 @@ button, input[type="submit"] {
     text-align: center;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     vertical-align: middle;
+}
+
+.smaller {
+    height: 100px;
+    width: 100px;
 }
