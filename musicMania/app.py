@@ -95,3 +95,8 @@ def beethoven():
 @app.route("/Haydn")
 def haydn():
    return render_template("haydn.html")
+
+@app.route("/pitch")
+def pitch():
+    return render_template("pitch.html")
+
