@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Perfect Pitch Quiz
+{% endblock %}
+
+{% block header %}
+    Do you have perfect pitch?
+{% endblock %}
+
+{% block script %}
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+        document.querySelector('#check').addEventListener('click', function(){
+            let corrects = 0;
+            let answers = document.querySelectorAll('.answers')
+            var dict = {0:['B-flat', 'A-sharp'], 1:['D'], 2:['E-flat', 'D-sharp'], 3:['G-sharp','A-flat'], 4:['F','E-sharp'], }
+            for (let i = 0; i < 5; i++){
+                if (dict[i].indexOf(answers[i].value) !== -1){
+                    corrects ++;
+                }
+            }
+            if (corrects == 5){
+                answers[0].parentElement.querySelector('.feedback').innerHTML = 'You have perfect pitch!';
+            }
+            else {
+                answers[0].parentElement.querySelector('.feedback').innerHTML = 'You got '+ corrects + "/5 correct. You do not have perfect pitch, but don't worry, you are in good company.";
+            }
+
+        });
+    });
+</script>
+{% endblock %}
+
+{% block main %}
+    <div class="card1">
+        <p>A common statistic is that approximately 1% of the world's population has perfect pitch.
+            While this number has been contested in more recent <a href="https://news.uchicago.edu/explainer/what-is-perfect-pitch#:~:text=UChicago%20Creative-,How%20rare%20is%20perfect%20pitch%2C%20and%20is%20it%20genetic%3F,thought%20to%20have%20perfect%20pitch.">research</a>, perfect pitch is still a rare skill.
+        </p>
+        <p>Are you one of the lucky few with this rare gift? Answer these five questions to find out!</p>
+
+    </div>
+    <div class="card1">
+        <p>Instructions: listen to the note and format your answers with capital letters for notes and "-sharp" or "-flat" as needed (e.g. A, F-sharp, D-flat). Good luck!</p>
+        <figure>
+            <audio controls src="/static/piano-bb_As_major.mp3">
+                <a href="/static/piano-bb_As_major.mp3"> Download audio </a>
+            </audio>
+        </figure>
+        <input class="answers">
+
+        <figure>
+            <audio controls src="/static/piano-d_D_major.wav">
+                <a href="/static/piano-d_D_major.wav"> Download audio </a>
+            </audio>
+        </figure>
+        <input class="answers">
+
+        <figure>
+            <audio controls src="/static/piano-eb_Ds_major.wav">
+                <a href="/static/piano-eb_Ds_major.wav"> Download audio </a>
+            </audio>
+        </figure>
+        <input class="answers">
+
+        <figure>
+            <audio controls src="/static/piano-g_Gs_major.wav">
+                <a href="/static/piano-g_Gs_major.wav"> Download audio </a>
+            </audio>
+        </figure>
+        <input class="answers">
+
+        <figure>
+            <audio controls src="/static/piano-f_F_major.wav">
+                <a href="/static/piano-f_F_major.wav"> Download audio </a>
+            </audio>
+        </figure>
+        <input class="answers">
+
+        <button id="check">Submit</button>
+        <p class="feedback"></p>
+
+    </div>
+{% endblock %}
