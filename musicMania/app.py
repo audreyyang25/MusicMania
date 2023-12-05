@@ -36,11 +36,11 @@ def home():
 def quiz():
     return render_template("mcquiz.html")
 
-@app.route("/piece")
+@app.route("/piecequiz")
 def pieceQuiz():
     return render_template("piecequiz.html")
 
-@app.route("/composer")
+@app.route("/composerquiz")
 def composerQuiz():
     return render_template("composerquiz.html")
 
@@ -100,7 +100,11 @@ def beethoven():
 def haydn():
    return render_template("haydn.html")
 
-@app.route("/pitch")
+@app.route("/pitchgame")
 def pitch():
     return render_template("pitchgame.html")
+
+@app.route("/composergame")
+def composergame():
+    return render_template("composergame.html")
 
