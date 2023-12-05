@@ -22,7 +22,7 @@ def after_request(response):
     response.headers["Pragma"] = "no-cache"
     return response
 
-
+# Assigns routes to different webpages
 @app.route("/")
 def index():
     return render_template("layout.html")
@@ -98,5 +98,5 @@ def haydn():
 
 @app.route("/pitch")
 def pitch():
-    return render_template("pitch.html")
+    return render_template("pitchgame.html")
 
