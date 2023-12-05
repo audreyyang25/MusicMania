@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="/static/styles.css" rel="stylesheet">
+        <title>{% block title %}Music Mania{% endblock %} </title>
+        {% block script %}{% endblock %}
+    </head>
+
+    <body>
+        <!-- Creates navbar-->
+        <div class="topnav">
+            <a class="nav-link" href="home">Home</a>
+            <a class="nav-link" href="quiz">Quizzes</a>
+            <a class="nav-link" href="games">Games</a>
+            <a class="nav-link" href="composers">Composers</a>
+        </div>
+        <div class="header">
+            <h1>{% block header %}Music Mania{% endblock %}</h1>
+        </div>
+
+        {% block main %}
+        <!-- Outlines history of classical music -->
+            <div class="card1">
+                <h1>A Brief History of Classical Music</h1>
+                <p>Classical music is generally divided into four musical periods: Baroque, Classical, Romantic, and Contemporary. The following sections will give a brief overview of each era.</p>
+                <div style="text-align: center;">
+                    <figure>
+                        <img width="400" src="https://assets.classicfm.com/2021/06/most-romantic-classical-music-1613054625-list-handheld-0.jpg">
+                    </figure>
+                </div>
+            </div>
+            <div class="card1">
+            <!-- Baroque Period history-->
+                <h2>Baroque Period (1600-1750)</h2>
+                <p>The etymology of baroque likely comes from the portuguese term "barroco", which means oddly shaped pearl.
+                    In general, Baroque music can be classified as complex, grand, heavy, and serious.
+                    The Baroque Period is commonly split into 3 overlapping periods: early Baroque (1580-1650),
+                    middle Baroque (1630-1700), and late Baroque (1680-1750). During the early Baroque period, composers based
+                    their music on ancient Greek music, which mostly has a vocal melody, accompanied by an instrument. In the middle Baroque period,
+                    composers began creating vocal and instrumental pieces for larger groups of musicians - new forms of music like the cantata, oratorio, and opera emerged.
+                    In the late Baroque period, polyphonic music, which is music that has multiple independent lines performed simultaneously, became popular.
+                    The piano had not been popular during the baroque period - the harpsichord was used instead.
+                    In general, Baroque composers expanded the size, range, and complexity of instrumental performance.
+                </p>
+                <div style="text-align: center;">
+                    <figure>
+                        <img width="400" src="https://ids.si.edu/ids/deliveryService?id=NMAH-ET2013-37918">
+                        <figcaption>A Harpsichord</figcaption>
+                    </figure>
+                </div>
+            <!-- Provides links to composer bios -->
+                <p>Some famous Baroque composers include <a href=Bach>Bach</a>, <a href=Handel>Handel</a>, and <a href=Vivaldi>Vivaldi</a>. Click each composer's name to learn more!</p>
+                <p>Click <a href="https://en.wikipedia.org/wiki/Baroque_music">here</a> to learn more about the Baroque Period!</p>
+            </div>
+
+        <!-- Classical Period history-->
+            <div class="card1">
+                <h2>Classical Period (1750-1820)</h2>
+                <p>The Classical Period produced music that was light and elegant. In contrast to the heavy textures
+                    and the complexity of the Baroque style, classical mmusic emphasized
+                    simplicity, which meant lighter, clearer textures. As such, classical music was often homophonic, which means
+                    that the piece had one clear melody with one or more supporting lines, which make up the harmony.
+                    The harpsichord, which was commonly used in the Baroque Period,
+                    was replaced by the piano. This change was significant because it allowed the performer to
+                    control the volume at which each note is produced. As a result, dynamics and phrasing became
+                    an important part of the music. During the Classical Period, the Sonata form was created and the symphonny was developed.
+                </p>
+                <div style="text-align: center;">
+                    <figure>
+                        <img width="400" src="https://www.libertyparkmusic.com/wp-content/uploads/Screen-Shot-2021-02-11-at-1.28.22-PM-1024x827.png">
+                    </figure>
+                </div>
+            <!-- Links to composer bios-->
+                <p>Some famous Classical composers include <a href=Mozart>Mozart</a>, <a href=Beethoven>Beethoven</a>, and <a href=Haydn>Haydn</a>. Click each composer's name to learn more!</p>
+                <p>Click <a href="https://en.wikipedia.org/wiki/Classical_period_(music)">here</a> to learn more about the Classical Period!</p>
+            </div>
+
+
+            <div class="card1">
+            <!-- Romantic Period history-->
+                <h2>Romantic Period (1800-1910)</h2>
+                <p>The Romantic Period is generally characterized by the intensity of energy and passion in musical compositions. Composers during this time focused more on nature, national identity, and the supernatural.
+                    Nocturnes, etudes, and rhapsodies became more popular, in addition to traditional structures like sonatas.
+                    In addition, composers experimented with new musical conventions and formats, using a wider range of dynamics and pitch, as well as more liberty during performances.
+                </p>
+                <div style="text-align: center;">
+                    <figure>
+                        <img width="400" src="https://images.ctfassets.net/i01duvb6kq77/f1d233b1938ab54ef0e0a47f39893e07/5f9d0c9c33b0f25cbf19ad724d80e1b6/chopin.jpg">
+                        <figcaption>An Original Chopin Manuscript</figcaption>
+                    </figure>
+                </div>
+
+            <!-- Links to composer bios-->
+                <p>Some famous Romantic composers include <a href=Chopin>Chopin</a>, <a href=Liszt>Liszt</a>, and <a href=Mendelssohn>Mendelssohn</a>. Click each composer's name to learn more!</p>
+                <p>Click <a href="https://en.wikipedia.org/wiki/Romantic_music">here</a> to learn more about the Romantic Period!</p>
+            </div>
+            <div class="card1">
+            <!-- Contemporary Period history -->
+                <h2>Contemporary Period (1890 - present)</h2>
+                <p>
+                    The Contemporary Period can be subdivided into the Modernist Period (1890 - 1975) and the Contemporary Period (1950 - present).
+                    The Modernist Period includes the Impressionist, Expressionist, and Neoclassical movements, which represent a transition from Romantic to Contemporary styles.
+                    Impressionism was an especially notable musical movement that focused on using more unique "colors" and tonal combinations; it is often associated with composers Debussy and Ravel.
+                    The Contemporary period is notable for its rejection of traditionally accepted composition techniques and styles, and its exploratory harmonies.
+                </p>
+                <div style="text-align: center;">
+                    <figure>
+                        <img width="400" src="https://dgpuo8cwvztoe.cloudfront.net/uploads/TMC/Images/_h_lg/49483/Chamber-Mix-Ensemble-from-the-Back.jpg">
+                    </figure>
+                </div>
+
+            <!-- Links to composer bios-->
+                <p>Some notable Contemporary composers include <a href=Debussy>Debussy</a>, <a href=Prokofiev>Prokofiev</a>, and <a href=Gershwin>Gershwin</a>. Click each composer's name to learn more!</p>
+                <p>Click <a href="https://en.wikipedia.org/wiki/Contemporary_classical_music">here</a> to learn more about the Contemporary period!</p>
+            </div>
+        {% endblock %}
+    </body>
+
+</html>
