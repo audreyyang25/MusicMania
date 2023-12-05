@@ -38,7 +38,11 @@ def quiz():
 
 @app.route("/piece")
 def pieceQuiz():
-    return render_template("piece.html")
+    return render_template("piecequiz.html")
+
+@app.route("/composer")
+def composerQuiz():
+    return render_template("composerquiz.html")
 
 @app.route("/composers")
 def composers():
