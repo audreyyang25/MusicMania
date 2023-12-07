@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Composer Bios
+{% endblock %}
+
+{% block header %}
+    Famous Composers
+    <br>
+    <font size="5">Click on each picture to learn more!</font>
+{% endblock %}
+
+{% block main %}
+
+    <body>
+
+    <!-- Photo grid of composer images-->
+    <!-- Some of our biographical information was obtained with the help of ChatGPT!-->
+        <div class="row">
+            <div class="column">
+                <a href=Bach Bach> <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Johann_Sebastian_Bach.jpg" style="width:100%"></a>
+                <a href=Handel Handel> <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/George_Frideric_Handel_by_Balthasar_Denner.jpg" style="width:100%"></a>
+                <a href=Vivaldi Vivaldi> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Vivaldi.jpg/1200px-Vivaldi.jpg" style="width:100%"></a>
+
+            </div>
+            <div class="column">
+                <a href=Beethoven Beethoven> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Joseph_Karl_Stieler%27s_Beethoven_mit_dem_Manuskript_der_Missa_solemnis.jpg/1200px-Joseph_Karl_Stieler%27s_Beethoven_mit_dem_Manuskript_der_Missa_solemnis.jpg" style="width:100%"></a>
+                <a href=Haydn Haydn> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Joseph_Haydn.jpg/800px-Joseph_Haydn.jpg" style="width:100%"></a>
+                <a href=Mozart Mozart> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Wolfgang-amadeus-mozart_1.jpg/1598px-Wolfgang-amadeus-mozart_1.jpg" style="width:100%"></a>
+
+            </div>
+            <div class="column">
+                <a href=Chopin Chopin> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Frederic_Chopin_photo.jpeg/800px-Frederic_Chopin_photo.jpeg" style="width:100%"></a>
+                <a href=Liszt Liszt> <img src="https://cdn.thecollector.com/wp-content/uploads/2021/12/young-franz-liszt-portrait.jpg?width=1200&quality=55" style="width:100%"></a>
+                <a href=Mendelssohn Mendelssohn> <img src="https://assets.classicfm.com/2013/35/felix-mendelssohn-1378223442-view-1.jpg" style="width:100%"></a>
+            </div>
+            <div class="column">
+                <a href=Debussy Debussy><img src="https://upload.wikimedia.org/wikipedia/en/b/b4/Claude_Debussy_atelier_Nadar.jpg" style="width:100%"></a>
+                <a href=Gershwin Gershwin><img src="https://hips.hearstapps.com/hmg-prod/images/gettyimages-514887332-copy.jpg?crop=1xw:1.0xh;center,top&resize=1200:*" style="width:100%"></a>
+                <a href=Prokofiev Prokofiev><img src="https://cso.org/media/0x3d0ige/sergei-prokofiev-edit.jpg?mode=max&quality=80&width=1024&upscale=false" style="width:100%"></a>
+            </div>
+        </div>
+
+    </body>
+
+{% endblock %}

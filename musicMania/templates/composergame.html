@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Composer Game
+{% endblock %}
+
+{% block header %}
+    Do you know your composers?
+{% endblock %}
+
+{% block script %}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let check = document.querySelector('#check');
+            check.addEventListener('click', function() {
+                let corrects = 0;
+
+            // Creates array of inputted answers
+                let answers = document.querySelectorAll('.answers')
+
+            // Creates array of correct answers
+                var array = ['Ravel', 'Beethoven', 'Liszt', 'Mendelssohn', 'Mozart', 'Tchaikovsky', 'Bach']
+
+            // Checks if answers are correct
+                for (let i = 0; i < 7; i++) {
+                    if (array[i] === answers[i].value) {
+                        corrects++;
+                    }
+                }
+
+            // Returns appropriate feedback
+                if (corrects <= 1) {
+                    answers[0].parentElement.querySelector('.feedback').innerHTML = 'You got ' + corrects + "/7 correct. Not so great this time, but no worries, there's always next time!";
+                } else if (corrects >= 5 && corrects < 7) {
+                    answers[0].parentElement.querySelector('.feedback').innerHTML = 'You got ' + corrects + "/7 correct. Impressive!";
+                } else if (corrects == 7) {
+                    answers[0].parentElement.querySelector('.feedback').innerHTML = 'Amazing! You got ' + corrects + "/7 correct. You definitely know your composers.";
+                } else {
+                    answers[0].parentElement.querySelector('.feedback').innerHTML = 'You got ' + corrects + "/7 correct. Not bad!";
+                }
+
+            });
+        });
+    </script>
+{% endblock %}
+
+{% block main %}
+    <div class="card1">
+        <p>How well do you know your classical composers? Test your musical knowledge here, with this quick game!</p>
+
+    </div>
+    <div class="card1">
+        <p>Instructions: listen to the excerpt and enter in the composer's last name, with proper capitalization. Good luck!</p>
+
+    <!-- Embeds audio files of pieces -->
+        <figure>
+            <audio controls src="/static/Ravel.mp3">
+                <a href="/static/Ravel.mp3"> Download audio </a>
+            </audio>
+        </figure>
+
+    <!-- Allows user to enter free response -->
+        <input class="answers">
+
+        <figure>
+            <audio controls src="/static/Beethoven.mp3">
+                <a href="/static/Beethoven.mp3"> Download audio </a>
+            </audio>
+        </figure>
+        <input class="answers">
+
+        <figure>
+            <audio controls src="/static/Liszt.mp3">
+                <a href="/static/Liszt.mp3"> Download audio </a>
+            </audio>
+        </figure>
+        <input class="answers">
+
+        <figure>
+            <audio controls src="/static/Mendelssohn.mp3">
+                <a href="/static/Mendelssohn.mp3"> Download audio </a>
+            </audio>
+        </figure>
+        <input class="answers">
+
+        <figure>
+            <audio controls src="/static/Mozart.mp3">
+                <a href="/static/Mozart.mp3"> Download audio </a>
+            </audio>
+        </figure>
+        <input class="answers">
+
+        <figure>
+            <audio controls src="/static/Tchaikovsky.mp3">
+                <a href="/static/Tchaikovsky.mp3"> Download audio </a>
+            </audio>
+        </figure>
+        <input class="answers">
+
+        <figure>
+            <audio controls src="/static/Bach.mp3">
+                <a href="/static/Bach.mp3"> Download audio </a>
+            </audio>
+        </figure>
+        <input class="answers">
+
+    <!-- Creates submit button to check answers-->
+        <p></p>
+        <button id="check">Submit</button>
+        <p class="feedback"></p>
+
+    </div>
+{% endblock %}
